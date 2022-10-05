@@ -16,7 +16,7 @@ public class TelaSistema extends JFrame implements ActionListener {
     private JMenu jmOrcamento = new JMenu("Orçamento");
     private JMenu jmOrdemServico = new JMenu("Ordem Serviço");
     private JMenuItem jmiCadastroDoCliente = new JMenuItem("Cadastro do cliente");
-    private JMenuItem jmiOrcamento = new JMenuItem("Cadastro do cliente");
+    private JMenuItem jmiOrcamento = new JMenuItem("Orçamento");
 
     public TelaSistema(String titulo) {
         setTitle(titulo);
@@ -42,13 +42,8 @@ public class TelaSistema extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == jmiCadastroDoCliente) {
-            TelaCadastroPais telaCadastroPais = 
-                    new TelaCadastroPais();
-            jdp.add(telaCadastroPais);
-        }
-        if (ae.getSource() == jmiCadastroDoCliente) {
-            TelaCadastroPais telaCadastroPais = 
-                    new TelaCadastroPais();
+            TelaCadastroCliente telaCadastroPais = 
+                    new TelaCadastroCliente();
             jdp.add(telaCadastroPais);
         }
     }
