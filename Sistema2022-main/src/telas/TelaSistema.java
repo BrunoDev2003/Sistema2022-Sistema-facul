@@ -16,7 +16,9 @@ public class TelaSistema extends JFrame implements ActionListener {
     private JMenu jmOrcamento = new JMenu("Orçamento");
     private JMenu jmOrdemServico = new JMenu("Ordem Serviço");
     private JMenuItem jmiCadastroDoCliente = new JMenuItem("Cadastro do cliente");
-    private JMenuItem jmiOrcamento = new JMenuItem("Orçamento");
+    private JMenuItem jmiOrcamento = new JMenuItem("Menu Orçamento");
+    private JMenuItem jmiOrdemServico = new JMenuItem("Menu Ordem Serviço");
+
 
     public TelaSistema(String titulo) {
         setTitle(titulo);
@@ -28,6 +30,7 @@ public class TelaSistema extends JFrame implements ActionListener {
         jmb.add(jmOrdemServico);
         adicionarItemMenu(jmCadastro, jmiCadastroDoCliente);
         adicionarItemMenu(jmOrcamento, jmiOrcamento);
+        adicionarItemMenu(jmOrdemServico, jmiOrdemServico);
         setExtendedState(MAXIMIZED_BOTH);
         setVisible(true);
         setDefaultCloseOperation(
@@ -42,9 +45,17 @@ public class TelaSistema extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == jmiCadastroDoCliente) {
-            TelaCadastroCliente telaCadastroPais = 
+            TelaCadastroCliente telaCadastroCliente = 
                     new TelaCadastroCliente();
-            jdp.add(telaCadastroPais);
+            jdp.add(telaCadastroCliente);
+        } else if (ae.getSource() == jmiOrcamento) {
+            TelaOrcamento telaOrcamento = 
+                    new TelaOrcamento();
+            jdp.add(telaOrcamento);
+        } else if (ae.getSource() == jmiOrdemServico) {
+            TelaOrdemServico telaOrdemServico = 
+                    new TelaOrdemServico();
+            jdp.add(telaOrdemServico);
         }
     }
 }

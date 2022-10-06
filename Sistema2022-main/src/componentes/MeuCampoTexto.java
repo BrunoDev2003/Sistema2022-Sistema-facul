@@ -44,17 +44,17 @@ public class MeuCampoTexto extends JTextField implements MeuComponente {
         Border bordaPadrao = getBorder();
         Color corPadrao = getBackground();
         addFocusListener(new FocusListener() {
-           @Override
-           public void focusGained(FocusEvent fe) {
-               setBorder(BorderFactory.createLineBorder(Color.cyan, 2));
-               setBackground(new Color(200, 250, 255));
-           }
+            @Override
+            public void focusGained(FocusEvent fe) {
+                setBorder(BorderFactory.createLineBorder(Color.cyan, 2));
+                setBackground(new Color(200, 250, 255));
+            }
 
-           @Override
-           public void focusLost(FocusEvent fe) {
-               setBorder(bordaPadrao);
-               setBackground(corPadrao);
-           }              
+            @Override
+            public void focusLost(FocusEvent fe) {
+                setBorder(bordaPadrao);
+                setBackground(corPadrao);
+            }              
         });
     }
 
