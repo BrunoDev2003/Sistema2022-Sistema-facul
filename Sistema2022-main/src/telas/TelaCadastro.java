@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+
 public class TelaCadastro extends JInternalFrame implements ActionListener {
 
     protected final int PADRAO = 0;
@@ -105,9 +106,6 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
     }
 
     public void habilitaCampos(boolean status) {
-//        for(int i = 0; i < campos.size(); i++) {
-//           campos.get(i).setEnabled(status);
-//        }
 
         for (MeuComponente campo : campos) {
             ((JComponent) campo).setEnabled(status);
