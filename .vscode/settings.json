@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\wwwbr\\Dropbox\\PC\\Downloads\\jaybird-11\\jaybird-full-4.0.8.java11.jar"
+    ]
+}
