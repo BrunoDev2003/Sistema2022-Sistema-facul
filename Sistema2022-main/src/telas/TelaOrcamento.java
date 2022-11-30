@@ -3,9 +3,9 @@ package telas;
 import componentes.MeuCampoTexto;
 
 public class TelaOrcamento extends TelaCadastro {
-    private MeuCampoTexto mctEquipamento= new MeuCampoTexto("Equipamento", 15, true);
-    private MeuCampoTexto mctMarca= new MeuCampoTexto("Marca", 20, true);
-    private MeuCampoTexto mccServico = new MeuCampoTexto("Servico", 20, true);
+    private MeuCampoTexto mctEquipamento= new MeuCampoTexto("Equipamento", 30, true);
+    private MeuCampoTexto mctMarca= new MeuCampoTexto("Marca", 30, true);
+    private MeuCampoTexto mccServico = new MeuCampoTexto("Manutenção", 30, true);
     public TelaOrcamento() {
         super("Orçamento");
         setVisible(true);

@@ -4,7 +4,7 @@ package telas;
 import componentes.MeuCampoTexto;
 
 public class TelaCadastroCliente extends TelaCadastro {
-    private MeuCampoTexto mctNome = new MeuCampoTexto("Nome", 15, true);
+    private MeuCampoTexto mctNome = new MeuCampoTexto("Nome", 20, true);
     private MeuCampoTexto mctCpfCNPJ = new MeuCampoTexto("CPF/CNPJ", 20, true);
     private MeuCampoTexto mctFone = new MeuCampoTexto( "Fone",  20,  true);
     private MeuCampoTexto mccEndereco = new MeuCampoTexto("Endereco", 20, true);
