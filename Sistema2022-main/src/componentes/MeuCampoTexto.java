@@ -62,4 +62,10 @@ public class MeuCampoTexto extends JTextField implements MeuComponente {
     public boolean isValido() {
         return true;
     }
+
+    public void setValor(String string) {
+    }
+
+    public void setValor(int cpf_Cnpj) {
+    }
 }

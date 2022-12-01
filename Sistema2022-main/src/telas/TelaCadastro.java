@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class TelaCadastro extends JInternalFrame implements ActionListener {
+public abstract class TelaCadastro extends JInternalFrame implements ActionListener {
 
     protected final int PADRAO = 0;
     protected final int INCLUINDO = 1;
@@ -138,6 +138,14 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         habilitaBotoes();
     }
 
+    abstract public boolean incluir();
+
+    abstract public boolean alterar();
+
+    abstract public boolean excluir();
+
+    abstract public boolean consultar();
+
     public boolean validaCampos() {
         String errosObrigatorio = "";
         String errosValido = "";
@@ -165,5 +173,11 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
         } else {
             return false;
         }
+        
+    }
+    public void preencherDados(int pk) {
+        estadoTela = PADRAO;
+        temDadosNaTela = true;
+        habilitaBotoes();
     }
 }

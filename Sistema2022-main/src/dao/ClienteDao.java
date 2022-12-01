@@ -8,9 +8,10 @@ import javax.swing.JOptionPane;
 
 public class ClienteDao {
     public final String SQL_INCLUIR = "INSERT INTO CLIENTE VALUES (?,?,?,?,?)";
-    public final String SQL_ALTERAR = "UPDATE CIDADE SET NOME = ?, CPF_CNPJ = ?, FONE= ? ENDERECO = ?";
+    public final String SQL_ALTERAR = "UPDATE CLIENTE SET NOME = ?, CPF_CNPJ = ?, FONE= ? ENDERECO = ?";
     public final String SQL_EXCLUIR = "DELETE FROM CLIENTE WHERE ID_CLIENTE = ?";
     public final String SQL_CONSULTAR = "SELECT * FROM CLIENTE WHERE ID_CLIENTE = ?";
+    public static final String SQL_PESQUISAR = "SELECT ID_CLIENTE, NOME, CPF_CNPJ, FONE, ENDERECO FROM CLIENTE JOIN ENDERECO ON CLIENTE.ID_CLIENTE = CLIENTE.ID_CLIENTE ORDER BY NOME";
     
 
     public boolean incluir(Cliente cliente) {
@@ -42,7 +43,7 @@ public class ClienteDao {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Não foi possível alterar o Estado.");
+            JOptionPane.showMessageDialog(null, "Não foi possível alterar o CLIENTE.");
             return false;
         }
     }
@@ -67,9 +68,9 @@ public class ClienteDao {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 cliente.setNome(rs.getString("NOME"));
-                cliente.setCpf_Cnpj(rs.getInt("ID_ESTADO"));
-                cliente.setFone(rs.getInt("ID_ESTADO"));
-                cliente.setEndereco(rs.getString("ID_ESTADO"));
+                cliente.setCpf_Cnpj(rs.getInt("CPF_CNPJ"));
+                cliente.setFone(rs.getInt("FONE"));
+                cliente.setEndereco(rs.getString("ENDERECO"));
                 return true;
             } else {
                 return false;

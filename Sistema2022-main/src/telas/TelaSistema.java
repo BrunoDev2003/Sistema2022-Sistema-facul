@@ -10,7 +10,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 public class TelaSistema extends JFrame implements ActionListener {
-    private JDesktopPane jdp = new JDesktopPane();
+    static JDesktopPane jdp = new JDesktopPane();
     private JMenuBar jmb = new JMenuBar();
     private JMenu jmCadastro = new JMenu("Cadastro");
     private JMenu jmOrcamento = new JMenu("Orçamento");
