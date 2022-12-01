@@ -65,7 +65,7 @@ public class TelaCadastroCliente extends TelaCadastro {
     public boolean consultar() {
         new TelaConsulta(this,
                 "Consulta de Cliente",
-                new String[]{"Código", "Nome", "Estado", "Ativo"},
+                new String[]{"Código", "Nome","CPF/CNPJ", "FONE", "ENDERECO"},
                 ClienteDao.SQL_PESQUISAR);
         return true;
     }
@@ -80,7 +80,8 @@ public class TelaCadastroCliente extends TelaCadastro {
         mctCpfCNPJ.setValor(cliente.getCpf_Cnpj());
         mctFone.setValor(cliente.getFone());
 
+    super.preencherDados(id);
     }
+}
 
     
-}

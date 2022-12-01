@@ -13,6 +13,7 @@ public class ProdutoDao {
     public final String SQL_ALTERAR = "UPDATE PRODUTO SET CADASTRO = ?, WHERE ID_PRODUTO";
     public final String SQL_EXCLUIR = "DELETE FROM PRODUTO WHERE ID_PRODUTO = ?";
     public final String SQL_CONSULTAR = "SELECT * FROM PRODUTO WHERE ID_PRODUTO = ?";
+    public static final String SQL_PESQUISAR = "SELECT ID_PRODUTO, PRODUTO FROM PRODUTO JOIN PRODUTO ON PRODUTO.ID_PRODUTO = PRODUTO.ID_PRODUTO ORDER BY PRODUTO";
 
     public boolean incluir(Produto produto) {
         try {

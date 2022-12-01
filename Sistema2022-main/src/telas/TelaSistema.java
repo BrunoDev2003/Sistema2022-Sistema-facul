@@ -25,7 +25,7 @@ public class TelaSistema extends JFrame implements ActionListener {
     public TelaSistema(String titulo) {
         setTitle(titulo);
         getContentPane().add(jdp);
-        jdp.setBackground(Color.blue);
+        jdp.setBackground(Color.DARK_GRAY);
         setJMenuBar(jmb);
         jmb.add(jmCadastro);
         jmb.add(jmOrcamento);
