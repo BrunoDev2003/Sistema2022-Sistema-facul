@@ -20,9 +20,8 @@ public class Conexao {
         } else {
             try {
                 Class.forName("org.firebirdsql.jdbc.FBDriver");
-                conexao = DriverManager.getConnection(
-                        "jdbc:firebirdsql://localhost:3050/C:/Users/wwwbr/OneDrive/Documentos/Sistema2022_vitor.FDB",
-                        "SYSDBA", "bartallen");
+                conexao = DriverManager.getConnection("jdbc:firebirdsql://localhost:3050/" + System.getProperty("user.dir")+ "/BANCO.FDB",
+                "SYSDBA", "1234");
                     return conexao;
             } catch (ClassNotFoundException cnfe) {
                 cnfe.printStackTrace();

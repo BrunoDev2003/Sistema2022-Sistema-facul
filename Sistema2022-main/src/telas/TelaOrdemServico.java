@@ -19,6 +19,7 @@ public class TelaOrdemServico extends TelaCadastro {
     public TelaOrdemServico() {
         super("Ordem Serviço");
         setVisible(true);
+        adicionaCampo(mctCodigo, 1, 1, 1, 1);
         adicionaCampo(mctServico, 1, 2, 1, 1);
         adicionaCampo(mctEstEqui, 2, 2, 1, 1);
 

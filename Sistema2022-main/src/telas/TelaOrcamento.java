@@ -19,6 +19,7 @@ public class TelaOrcamento extends TelaCadastro {
     public TelaOrcamento() {
         super("Orçamento");
         setVisible(true);
+        adicionaCampo(mctCodigo, 1, 1, 1, 1);
         adicionaCampo(mctEquipamento, 1, 1, 1, 1);
         adicionaCampo(mctMarca, 2, 1, 1, 3);
         adicionaCampo(mccManutencao, 3, 1, 1, 1);

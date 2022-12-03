@@ -7,7 +7,7 @@ import pojo.Produto;
 public class TelaProduto extends TelaCadastro {
     private Produto produto = new Produto();
     private ProdutoDao produtoDao = new ProdutoDao();
-    private MeuCampoTexto mctCadastro = new MeuCampoTexto("Cadastro do Produto", 30, true);
+    private MeuCampoTexto mctProduto = new MeuCampoTexto("Produto do Produto", 30, true);
     private MeuCampoTexto mctCodigo = new MeuCampoTexto("Código", 5, false) {
         @Override
         public void setEnabled(boolean status) {
@@ -19,7 +19,7 @@ public class TelaProduto extends TelaCadastro {
         super("Produto");
         
         setVisible(true);
-        adicionaCampo(mctCadastro, 1, 1, 1, 1);
+        adicionaCampo(mctProduto, 1, 1, 1, 1);
 
 //      mostraLinhasColunasComponentes();
         habilitaCampos(false);
@@ -29,7 +29,7 @@ public class TelaProduto extends TelaCadastro {
     
     public void setaPojo() {
         produto.setIdProduto(Integer.parseInt("0" + mctCodigo.getValor()));
-        produto.setCadastro(mctCadastro.getValor());
+        produto.setCadastro(mctProduto.getValor());
        // produto.setAtivoCidade(mcsnAtivo.getValor().charAt(0));
     }
 
@@ -69,7 +69,7 @@ public class TelaProduto extends TelaCadastro {
         produto.setIdProduto(id);
         produtoDao.consultar(produto);
         mctCodigo.setValor("" + produto.getIdProduto());
-        mctCadastro.setValor(produto.getCadastro());
+        mctProduto.setValor(produto.getCadastro());
        // mcsnAtivo.setValor(cidade.getAtivoCidade() == 'S' ? "Sim" : "Não");
     
         super.preencherDados(id);

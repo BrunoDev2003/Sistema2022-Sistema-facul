@@ -23,8 +23,8 @@ public class Cliente {
     public int getCpf_Cnpj() {
         return Cpf_Cnpj;
     }
-    public void setCpf_Cnpj(int cpf_Cnpj) {
-        this.Cpf_Cnpj = cpf_Cnpj;
+    public void setCpf_Cnpj(int i) {
+        this.Cpf_Cnpj = i;
     }
     public int getFone() {
         return Fone;
