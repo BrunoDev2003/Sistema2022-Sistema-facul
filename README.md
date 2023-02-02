@@ -1,4 +1,4 @@
-# Sistema2022-Sistema-facul
+# Sistema-CRUD-JAVA-2022
 Um sistema de CRUD em JAVA com conexão ao banco de dados FIREBIRD usando o DBEAVER, desenvolvido para 
 fazer o cadastro de consoles, computadores e peças de hardware.
 
